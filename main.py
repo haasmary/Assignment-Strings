@@ -14,8 +14,8 @@ scorers= player1 +" "+str(goal_0) +", "+ player2 +" "+str(goal_1)
 report = f'{player1} scored in the {goal_0}nd minute\n{player2} scored in the {goal_1}th minute'
 
 player='Frank Rijkaard'
-first_name=player[player.find("Frank"):5]
-last_name_len=len(player[player.find("R"):14])
-name_short=player[0:1]+". "+player[6:]
-chant=(player[0:5]+'! ')*4 +player[0:5]+'!'
+first_name=player[0:player.find(" ")]
+last_name_len=len(player[player.find(" "):])-1
+name_short=player[:1]+"."+ player[player.find(" "):]
+chant=(player[:player.find(" ")]+'! ')*(len(first_name)-1) +player[:player.find(" ")]+'!'
 good_chant= chant[-1]!=' '
